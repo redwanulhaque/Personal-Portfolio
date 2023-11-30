@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head> <!-- HEAD -->
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatiable" content="ie-edge">
+            <link rel="stylesheet" href="style.css">
+            <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+            <script src="script.js" defer></script>
+            <title>Redwanul Haque</title>
+            <script src="https://kit.fontawesome.com/86b206dc3f.js" crossorigin="anonymous"></script>
+
+  </head> <!-- HEAD -->
+
+
+  <body> <!-- BODY -->
+
+            <div id="lock"> <h1>Please rotate your device</h1></div>
+
+            <script>
+              function adjustZoom() {
+                const baseZoom1 = 0.516;
+                const baseZoom2 = 1.044;
+                const baseZoom3 = 1.57;
+                const baseZoom4 = 2.1;
+                const baseZoom5 = 2.62;
+                const baseZoom6 = 3.15;
+                const baseZoom7 = 3.68;
+                const baseZoom8 = 4.20;
+
+                const zoomFactor = 0.0106;
+
+                const minZoom = 0.2;
+
+                const windowWidth = window.innerWidth;
+                let newZoom;
+
+                if (windowWidth < 8000 && windowWidth >= 7000) {
+                  const widthDifference = 8000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom8 - zoomDecrease;
+                }
+
+                else if (windowWidth < 7000 && windowWidth >= 6000) {
+                  const widthDifference = 7000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom7 - zoomDecrease;
+                }
+
+                else if (windowWidth < 6000 && windowWidth >= 5000) {
+                  const widthDifference = 6000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20.2) * zoomFactor;
+                  newZoom = baseZoom6 - zoomDecrease;
+                }
+
+                else if (windowWidth < 5000 && windowWidth >= 4000) {
+                  const widthDifference = 5000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom5 - zoomDecrease;
+                }
+
+                else if (windowWidth < 4000 && windowWidth >= 3000) {
+                  const widthDifference = 4000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom4 - zoomDecrease;
+                }
+
+                else if (windowWidth < 3000 && windowWidth >= 2000) {
+                  const widthDifference = 3000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom3 - zoomDecrease;
+                }
+
+                else if (windowWidth < 2000 && windowWidth >= 1000) {
+                  const widthDifference = 2000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom2 - zoomDecrease;
+                }
+
+                else if (windowWidth < 1000 && windowWidth >= 500) {
+                  const widthDifference = 1000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom1 - zoomDecrease;
+                }
+
+                document.body.style.zoom = Math.max(newZoom, minZoom);
+              }
+
+              adjustZoom();
+              window.addEventListener('resize', adjustZoom);
+            </script>
+
+            <div class ="hero">
+
+                  <div class="btn-box">
+                    <button id="btn1" onclick="open1()"><i class="fa-solid fa-2x fa-person"></i>About Me</button>
+                    <button id="btn2" onclick="open2()"><i class="fa-solid fa-2x fa-folder"></i>Personal Projects</button>
+                    <button id="btn3" onclick="open3()"><i class="fa-solid fa-2x fa-graduation-cap"></i>Education</button>
+                    <button id="btn4" onclick="open4()"><i class="fa-brands fa-2x fa-black-tie"></i>Experiences</button>
+                    <button id="btn5" onclick="open5()"><i class="fa-solid fa-2x fa-brain"></i>My Skills</button>
+                    <button id="btn6" onclick="open6()"><i class="fa-solid fa-2x fa-file-arrow-down"></i>Resume</button>
+                    <button id="btn7" onclick="open7()"><i class="fa-solid fa-2x fa-envelope"></i>Contact Me</button>
+                  </div>
+
+                  <!-- About Me -->
+                  <div id="content1" class="content">
+
+                    <i class="fa-solid fa-5x fa-infinity"></i>
+
+                    <div class="aboutmeName">
+                      <h2>Redwanul_Haque</h2>
+                      <h2>Redwanul_Haque</h2>
+                    </div>
+
+                    <div class="softwareeng">
+                      <h4>Software Engineer</h4>
+                    </div>
+
+                    <div class="cube-3d">
+                      <div class="cube">
+                        <div class="face front"> <img id="front-side" src="photos/portrait_1.jpg" alt="not found"> </div>
+                        <div class="face back"> <img id="back-side" src="photos/portrait_2.jpg" alt="not found"> </div>
+                        <div class="face right"> <img id="right-side" src="photos/portrait_3.jpg" alt="not found"> </div>
+                        <div class="face left"> <img id="left-side" src="photos/portrait_4.jpg" alt="not found"> </div>
+                        <div class="face top"> <img id="top-side" src="photos/portrait_5.jpg" alt="not found"> </div>
+                        <div class="face bottom"> <img id="bottom-side" src="photos/portrait_6.jpg" alt="not found"> </div>
+                      </div>
+                    </div>
+
+                    <a id="githubb" href="https://github.com/redwanulhaque" target="_blank">
+                      <i class="fa-brands fa-4x fa-github"></i>
+                    </a>
+
+                    <a id="linkedinn" href="https://www.linkedin.com/in/redwanul-haque-457a9a17b/" target="_blank">
+                      <i class="fa-brands fa-4x fa-linkedin-in"></i>
+                    </a>
+
+                    <a id="emaill" href="mailto:redwanulhaque703@gmail.com"><i class="fa-solid fa-4x fa-envelope-circle-check"></i>
+                    </a>
+
+                    <div class="contai">
+                      <h2 class="title">
+                        <span class="title-word title-word-1">Let</span>
+                        <span class="title-word title-word-2">Me</span>
+                        <span class="title-word title-word-3">introduce</span>
+                        <span class="title-word title-word-4">myself</span>
+                      </h2>
+                    </div>
+
+                    <div class=getToknowme>
+                      <p id="me"> Hello, I'm Redwanul Haque. I am a dedicated and ambitious individual who graduated from Queens College with a Bachelor's degree in Computer Science and a minor in Mathematics. I am passionate about software development, especially the back-end side, and I am always eager to learn new skills and explore new opportunities in this field. I have a strong foundation in programming languages such as Java and Python and have experience in developing web applications using frameworks like Spring Boot and Django. If you're looking for a motivated and driven individual to join your team, I would love to connect and explore potential opportunities in software development.</P>
+                    </div>
+
+                    <div class="warpper">
+                      <input class="radio" id="one" name="group" type="radio" checked>
+                      <input class="radio" id="two" name="group" type="radio">
+                      <input class="radio" id="three" name="group" type="radio">
+                      <div class="tabs">
+                        <label class="tab" id="one-tab" for="one">Hobbies</label>
+                        <label class="tab" id="two-tab" for="two">Facts</label>
+                        <label class="tab" id="three-tab" for="three">Entertainment</label>
+                      </div>
+
+                      <div class="panels">
+
+                      <div class="panel" id="one-panel">
+                        <div class="panel-title"></div>
+                        <li>Coding</li>
+                        <li>Reading</li>
+                        <li>Going to Gym</li>
+                        <li>Playing Video Games</li>
+                        <li>Swimming</li>
+                        <li>Leetcode</li>
+                        <li>Watching Movies / TV Shows</li>
+                      </div>
+
+                      <div class="panel" id="two-panel">
+                        <div class="panel-title"></div>
+                        <li>I favor back-end coding over front-end.</li>
+                        <li>My preferred coding language is Java and Python.</li>
+                        <li>Every day, my objective is to solve one LeetCode problem.</li>
+                        <li>I gained most of my coding skills in college and through self-study.</li>
+                      </div>
+
+                      <div class="panel" id="three-panel">
+                        <div class="panel-title"></div>
+                        <li>Video Game - Adventure Quest 3D, COD Mobile</li>
+                        <li>Music Artists - The Weeknd, Don Omar</li>
+                        <li>Book - The Last Apprentice Series, Michael Vey Series</li>
+                        <li>TV Shows - The Boys, Stranger Things, Resident Alien, From</li>
+                        <li>Sport - Table Tennis, Soccer, Billiards</li>
+                      </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End About Me -->
+
+
+                  <!-- Personal Projects -->
+                  <div id="content2" class="content">
+
+                    <div class="content-left">
+
+                    <div class= "Banking-video">
+                      <h3 id="Banking-Cooperation-Video"> Banking Cooperation Video </h3>
+                      <video width="290" height="240" controls>
+                        <source src="photos/Banking.mp4" type="video/mp4">
+                      </video>
+                      <a id="banking-link" href="https://github.com/redwanulhaque/Banking-Cooperation" target="_blank">Code Link</a>
+                    </div>
+
+                    <div class= "jeopardy-video">
+                      <h3 id="jeopardy-game-Video"> Jeopardy Game Video </h3>
+                      <video width="290" height="240" controls>
+                        <source src="photos/jeopardy.mp4" type="video/mp4">
+                      </video>
+                      <a id="jeopardy-link" href="https://github.com/redwanulhaque/Jeopardy-Game" target="_blank">Code Link</a>
+                    </div>
+
+                    <div class= "decision-video">
+                      <h3 id="decision-tree-Video"> Decision Tree Video </h3>
+                      <video width="290" height="240" controls>
+                        <source src="photos/decision-tree.mp4" type="video/mp4">
+                      </video>
+                      <a id="decision-link" href="https://github.com/redwanulhaque/Decision-Tree" target="_blank">Code Link</a>
+                    </div>
+
+                    <div class= "parse-video">
+                      <h3 id="web-parse-Video"> Web-Based Text Parser </h3>
+                      <video width="290" height="240" controls>
+                        <source src="photos/Parse.mp4" type="video/mp4">
+                      </video>
+                      <a id="parse-link" href="https://github.com/redwanulhaque/Text-Parser" target="_blank">Code Link</a>
+                    </div>
+
+                      <div class="book">
+                        <div id="pages" class="pages">
+
+                          <div class="page">
+                            <h1 id = "dang" data-shadow='Project Book'>Project Book</h1>
+                            <h2 id= "book-title" >by: Redwanul Haque</h2>
+                            <img class="book-pic" src="photos/book-title.jpg"/>
+                          </div>
+
+                          <div class="page">
+                            <h1 id="Banking-Cooperation-title">Banking Cooperation</h1>
+                            <h3 id="about-Banking-project">Project Details</h3>
+                            <p id="project-paragraph"> The task at hand was to create a program in JAVA that simulates a real-world banking institution using a binary tree data structure. The program was designed to read a text file containing information about multiple customers, such as their names, account numbers, and balances. To make the program more efficient and user-friendly, the binary tree sorts the customer information in the in-order traversal of last name. This allows for faster and easier access to customer profiles when performing various banking operations. To provide a better user experience, a graphical user interface (GUI) was engineered. The GUI displays a banking information structure, which includes all the customer profiles, and offers various banking operations on the screen. These operations include deposit, withdrawal, profile creation, and profile checking. The user can perform these operations by entering corresponding numbers that are associated with each operation. This allows for a seamless user experience and easy access to banking functionalities.
+                            </p>
+
+                            <h3 id="learned-Banking-project">What Did I learn?</h3>
+                            <li id="banking-bullet">Developed proficiency in programming with Java.</li>
+                            <li id="banking-bullet">Gained experience in designing and implementing data structures such as binary trees.</li>
+                            <li id="banking-bullet">Gained experience in designing and implementing data structures such as binary trees.</li>
+                          </div>
+
+                          <div class="page">
+                            <h1 id="jeopardy-game-title">Multithreaded Jeopardy Game</h1>
+                            <h3 id="about-jeopardy-project">Project Details</h3>
+                            <p id="project-paragraph2"> Developed a Jeopardy game application using Java and socket programming to allow interconnectivity between multiple computers on the same Wi-Fi network. The custom graphical user interface (GUI) was built using Java's Swing framework and enables communication between the game host and players via socket connections. The application uses a socket server on the host-side to manage incoming connections from players and send data to each player. Each player's client-side implementation uses a socket client to connect to the server, receive data, and send data as needed. The custom GUI presents the Jeopardy game board with categories and questions, a text box for players to enter answers, and displays each player's score. As the host reads each question, players enter their answers into the text box provided by the GUI. When a player submits an answer, the server verifies its correctness and adds the corresponding point value to the player's score if the answer is correct. If the answer is incorrect, the server sends a message indicating that the player's answer was incorrect. </p>
+                            <h3 id="learned-jeopardy-project">What Did I learn?</h3>
+                            <li id="jeopardy-bullet">Gained expertise in socket server and client implementations to manage incoming connections, transmit data, and maintain the network connection between devices.</li>
+                            <li id="jeopardy-bullet">Applied Java's data structures, such as arrays and lists, to manage game data and facilitate game logic processing.</li>
+                          </div>
+
+                          <div class="page">
+                            <h1 id="decision-tree-title">Decision Tree</h1>
+                            <h3 id="about-decision-tree-project">Project Details</h3>
+                            <p id="project-paragraph3">Developed a decision tree algorithm from scratch using Python programming language. The algorithm works by recursively partitioning the data into subsets based on the most informative features until a certain stopping criterion is met. The splitting criteria are chosen based on maximizing the information gain or minimizing the impurity measures, such as Gini index or entropy. The algorithm then predicts the outcome of the test data based on the learned decision rules. To improve the accuracy and robustness of the model, I also implemented a random forest ensemble method, which consists of constructing multiple decision trees on different subsets of the data and features and aggregating their predictions by majority voting. The random forest approach reduces overfitting and increases the generalization performance of the model, especially for complex and noisy datasets. I validated the performance of the decision tree and random forest models on various benchmark datasets and achieved competitive results compared to state-of-the-art methods.
+                            </p>
+                            <h3 id="learned-decision-project">What Did I learn?</h3>
+                            <li id="decision-bullet">Gained insights into how decision trees make predictions based on learned decision rules, which are generated during the recursive partitioning of the data.</li>
+                            <li id="decision-bullet">Learned how random forests can help reduce overfitting and improve generalization performance, especially for complex or noisy datasets.</li>
+                          </div>
+
+                          <div class="page">
+                            <h1 id="decision-tree-title">Web-Based Text Parser</h1>
+                            <h3 id="about-decision-tree-project">Project Details</h3>
+                            <p id="project-paragraph3"> Designed and developed a web  application that allows users to extract the occurrence of all the words from a given URL and display them in descending order of occurrence. The application was developed using PHP and SQL technologies. The web application consists of two main components - the data extraction and processing component and the front-end display component. When a user enters a URL into the web application, the data extraction and processing component uses PHP to extract all the words from the webpage content. The words are then stored in a SQL database table with a count of the number of times each word appears. The front-end display component of the web application is responsible for presenting the words and their frequency to the user. This component also uses PHP to query the SQL database and retrieve the word count data for the URL entered by the user. The data is then processed and displayed to the user in descending order of word frequency using HTML and CSS.
+                            </p>
+                            <h3 id="learned-decision-project">What Did I learn?</h3>
+                            <li id="decision-bullet">Learned how to develop scalable and secure web applications.</li>
+                            <li id="decision-bullet">Optimized SQL database structures and queries for efficient data handling.</li>
+                            <li id="decision-bullet">Gained understanding of PHP and SQL technologies.</li>
+                            <li id="decision-bullet">Developed skills in front-end web development using HTML and CSS for displaying data.</li>
+                          </div>
+
+                          <div class="page"></div>
+                          <div class="page"></div>
+
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="content-right"></div>
+
+                  </div>
+                  <!-- End Personal Projects -->
+
+
+                  <!-- Education -->
+                  <div id="content3" class="content">
+
+                    <div class = "main-items">
+                      <img id = "qc-logo" src="photos/qc logo.jpg" alt="Italian Trulli">
+
+                      <div class="name-college"> CUNY - Queens College </div>
+
+                      <div class="major"> Major: Computer Science, B.S. </div>
+
+                      <div class="minor"> Minor: Mathmatics </div>
+
+                      <div class="gpa"> GPA: 3.6 </div>
+
+                      <div class="graduation"> Anticipated Graduation: June 2023 </div>
+                    </div>
+
+                    <div class="timer">
+                      <h1 id="headline">Countdown to my Graduation!</h1>
+                      <div id="countdown">
+                        <ul class="time">
+                          <li class="days"><span id="days"></span>days</li>
+                          <li class="hours"><span id="hours"></span>Hours</li>
+                          <li class="minutes"><span id="minutes"></span>Minutes</li>
+                          <li><span id="seconds"></span>Seconds</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="firework"></div>
+                    <div class="firework"></div>
+                    <div class="firework"></div>
+
+                    <div class="course">
+                      <p id="text">Favorite Courses!<br></p>
+
+                      <div class="csci313" onclick="myFunction()">Data Structures
+                        <span class="popuptext" id="myPopup">Learned about different data Structure algorithms</span>
+                      </div>
+
+                      <div class="csci348" onclick="myFunction2()">Data Communications
+                        <span class="popuptext2" id="myPopup2">Learned about the core concepts of how the internet works</span>
+                      </div>
+
+                      <div class="csci323" onclick="myFunction3()">Design & Analysis Algorithms
+                        <span class="popuptext3" id="myPopup3">Learned about more advance types of algorithms</span>
+                      </div>
+
+                      <div class="csci381" onclick="myFunction4()">Machine Learning
+                        <span class="popuptext4" id="myPopup4">Learned about deep and shallow machine learning concepts</span>
+                      </div>
+
+                      <div class="math242" onclick="myFunction5()">Methods Of Math Statistics
+                        <span class="popuptext5" id="myPopup5">Learned how to use different Statistical formulas in real world examples</span>
+                      </div>
+
+                      <div class="csci340" onclick="myFunction6()">Operating Systems
+                        <span class="popuptext6" id="myPopup6">Learned about different parts of the Operating system and how it works on the computers</span>
+                      </div>
+
+                      <div class="csci316" onclick="myFunction7()">Principles of Programming Languages
+                        <span class="popuptext7" id="myPopup7">Learned about different parts of programming languages and how they operate in the compiler</span>
+                      </div>
+
+                      <div class="csci355" onclick="myFunction8()">Internet and Web Technologies
+                        <span class="popuptext8" id="myPopup8">Learned about different parts of the internet and programming languages in web developments</span>
+                      </div>
+
+                      <div class="csci3811" onclick="myFunction9()">Python Programming
+                        <span class="popuptext9" id="myPopup9">Learned about different parts of python programming and apply them to daily use</span>
+                      </div>
+
+                      <div class="csci370" onclick="myFunction10()">Software Engineering
+                        <span class="popuptext10" id="myPopup10">Learned about different software design patterns and the code implementation</span>
+                      </div>
+
+                      <div class="csci331" onclick="myFunction11()">Database Systems
+                        <span class="popuptext11" id="myPopup11">Learned about SQL structures and queries</span>
+                      </div>
+
+                      <div class="csci38111" onclick="myFunction12()">Cloud Computing
+                        <span class="popuptext12" id="myPopup12">Learned about fundamental of AWS and AZURE cloud computing platform</span>
+                      </div>
+
+                      <div class="math250" onclick="myFunction13()">Mathematical Computing
+                        <span class="popuptext13" id="myPopup13">Learned how to use Wolfram Mathematica: Modern Technical Computing platform</span>
+                      </div>
+
+                      <div class="csci381111" onclick="myFunction14()">Simulation in Technology
+                        <span class="popuptext14" id="myPopup14">Learned important software engineering techniques and terms</span>
+                      </div>
+
+
+                    </div>
+                    <div class="content-left"></div>
+                    <div class="content-right"></div>
+                  </div>
+                  <!-- End Education -->
+
+
+                  <!-- Experiences -->
+                  <div id="content4" class="content">
+
+                    <div class="waviy">
+                      <span style="--i:1">W</span>
+                      <span style="--i:2">O</span>
+                      <span style="--i:3">R</span>
+                      <span style="--i:4">K</span>
+                      <span style="--i:5">-</span>
+                      <span style="--i:6">E</span>
+                      <span style="--i:7">X</span>
+                      <span style="--i:8">P</span>
+                      <span style="--i:9">E</span>
+                      <span style="--i:10">R</span>
+                      <span style="--i:11">I</span>
+                      <span style="--i:12">E</span>
+                      <span style="--i:13">N</span>
+                      <span style="--i:14">C</span>
+                      <span style="--i:15">E</span>
+                     </div>
+
+                    <div class="work_tabs">
+                       <div class="work_tab">
+                           <input type="radio" id="tab-1" name="tab-group-1" checked>
+                           <label id= "tabs1" for="tab-1">Mentor / Tutor</label>
+
+                           <div class="work_content">
+                               <h2 > Company: CUNY Queens College </h2>
+                               <h3> Position: Computer Science Mentor / Tutor </h3>
+                               <h3> Date: September 2021 – December 2021 </h3>
+
+                               <LI style="text-align: left; margin-left: 20px; line-height: 1.4; margin-top: 20px" > Provided personalized consultations to incoming freshmen students on their programming assignments and equipped them with advanced techniques to become proficient programmers.</LI>
+
+                               <LI style="text-align: left; margin-left: 20px; line-height: 1.4; margin-top: 20px"> Delivered comprehensive lectures and hands-on sessions to teach freshmen students essential C++ and JAVA programming
+                                skills, empowering them to excel in their coursework and beyond.</LI>
+                           </div>
+                       </div>
+
+                       <div class="work_tab">
+                           <input type="radio" id="tab-2" name="tab-group-1">
+                           <label id= "tabs2" for="tab-2">Technician</label>
+
+                           <div class="work_content">
+                             <h2 style="font-size: 22px;"> Company: White Plains Pharmacy </h2>
+                             <h3> Position: Technician / Costumer Service </h3>
+                             <h3> Date: December 2019 – March 2020 </h3>
+
+                             <LI  style="text-align: left; margin-left: 20px; line-height: 1.4; margin-top: 20px"> Managed weekly inventory assessments as well as prepared treatments for patients. </LI>
+                             <LI  style="text-align: left; margin-left: 20px; line-height: 1.4; margin-top: 20px"> Acquired knowledge about different types of medicine usage. </LI>
+                           </div>
+                       </div>
+
+                      <div class="work_tab">
+                         <input type="radio" id="tab-3" name="tab-group-1">
+                         <label id= "tabs3" for="tab-3">Apprenticeship</label>
+
+                         <div class="work_content">
+                           <h2> Company: Code Nation</h2>
+                           <h3> Position: Software Engineer Apprenticeship</h3>
+                           <h3> Date: January 2022 – May 2022 </h3>
+
+                           <LI  style="text-align: left; margin-left: 20px; line-height: 1.4; margin-top: 20px"> Showcased a strong commitment to continuous learning and improvement throughout the apprenticeship.</LI>
+
+                           <LI  style="text-align: left; margin-left: 20px; line-height: 1.4; margin-top: 20px"> Demonstrated strong problem-solving skills by tackling complex coding challenges and finding efficient solutions.</LI>
+
+                           <LI  style="text-align: left; margin-left: 20px; line-height: 1.4; margin-top: 20px"> Participated in code reviews to improve code quality and ensure adherence to best practices.</LI>
+                         </div>
+                     </div>
+
+                    </div>
+
+                      <div class="waviyy">
+                        <span style="--i:1">V</span>
+                        <span style="--i:2">O</span>
+                        <span style="--i:3">L</span>
+                        <span style="--i:4">U</span>
+                        <span style="--i:5">N</span>
+                        <span style="--i:6">T</span>
+                        <span style="--i:7">E</span>
+                        <span style="--i:8">E</span>
+                        <span style="--i:9">R</span>
+                        <span style="--i:10">/</span>
+                        <span style="--i:11">I</span>
+                        <span style="--i:12">N</span>
+                        <span style="--i:13">T</span>
+                        <span style="--i:14">E</span>
+                        <span style="--i:15">R</span>
+                        <span style="--i:16">N</span>
+                        <span style="--i:17">S</span>
+                        <span style="--i:18">H</span>
+                        <span style="--i:19">I</span>
+                        <span style="--i:19">P</span>
+                       </div>
+
+                      <div class="intern_tabs">
+
+                         <div class="intern_tab">
+                             <input type="radio" id="tab-4" name="tab-group-2" checked>
+                             <label id= "tabs4" for="tab-4">HPHS</label>
+
+                             <div class="intern_content">
+                                 <h2> Company: HPHS </h2>
+                                 <h3> Position: Student Volunteer </h3>
+                                 <h3> Date: August 2018 </h3>
+
+                                 <li style="text-align: left; margin-left: 20px; line-height: 1.4; margin-top: 20px">Assisted and helped 5-10 students with the college application process.</li>
+
+                                 <LI style="text-align: left; margin-left: 20px; line-height: 1.4; margin-top: 20px"> Advised students to make the right decisions about college. </LI>
+                                 <LI style="text-align: left; margin-left: 20px; line-height: 1.4; margin-top: 20px"> Improved Students confidence about colleges. </LI>
+                             </div>
+                         </div>
+
+                         <div class="intern_tab">
+                             <input type="radio" id="tab-5" name="tab-group-2">
+                             <label id= "tabs5" for="tab-5">CUNY Service Corps</label>
+
+                             <div class="intern_content">
+                               <h2> Company: CUNY Queens College </h2>
+                               <h3> Position: Service Corps Student Intern </h3>
+                               <h3> Date: July 2021 – August 2021 </h3>
+
+                               <LI style="text-align: left; margin-left: 20px; line-height: 1.4; margin-top: 20px"> Built and established community-based projects to reopen different sections
+                                    of the city during the covid-19 pandemic. </LI>
+                             </div>
+                         </div>
+
+                    </div>
+                    <div class="content-left"></div>
+                    <div class="content-right"></div>
+                  </div>
+                  <!-- End Experiences -->
+
+
+                  <!-- Skills -->
+                  <div id="content5" class="content">
+
+                    <div class="content-left"></div>
+
+                      <h2 class="Languages">Languages</h2>
+
+                          <ul id="language-i-speak">
+                            <li>English</li>
+                            <li>Bengali</li>
+                            <li>Hindi</li>
+                          </ul>
+
+                      <h3 class="Systems">Systems</h3>
+
+                          <ul id="system-langauges-i-used">
+                            <li>Git</li>
+                            <li>Linux</li>
+                            <li>Windows</li>
+                            <li>Docker</li>
+                            <li>Kubernetes</li>
+                            <li>Bash</li>
+                            <li>PowerShell</li>
+                            <li>AWS</li>
+                            <li>Azure</li>
+                          </ul>
+
+                      <h3 class="programming">Programming Languages</h3>
+
+                          <ul id="programming-languages-i-know">
+                            <li>JAVA</li>
+                            <li>Python</li>
+                            <li>C++</li>
+                            <li>C</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>PHP</li>
+                            <li>SQL</li>
+                            <li>JAVA Script</li>
+                          </ul>
+
+                      <h3 class="Frameworks">Frameworks</h3>
+
+                          <ul id="framework-i-know">
+                            <li>Django</li>
+                            <li>Flask</li>
+                            <li>Spring Boot</li>
+                            <li>ASP.NET</li>
+                            <li>React.JS</li>
+                          </ul>
+
+                      <h3 class="Certifications">Certifications</h3>
+
+                         <ul id="Certifications-i-have">
+                            <li>MS Azure Fundamentals</li>
+                         </ul>
+
+                      <h3 class="Others">Others</h3>
+
+                          <ul id="other-skills-i-know">
+                            <li>Cloud Computing</li>
+                            <li>Project Management</li>
+                            <li>CI/CD</li>
+                            <li>Automation</li>
+                            <li>Data Structures</li>
+                            <li>Quality Assurance</li>
+                            <li> Software Development</li>
+                          </ul>
+
+                    <div class="content-right"></div>
+
+                  </div>
+                  <!-- End Skills -->
+
+
+                  <!-- Resume -->
+                  <div id="content6" class="content">
+                    <div class="content-left"></div>
+
+                    <div class="box"> <a id= "resume" href="Redwanul_Haque_Resume.pdf" download>
+                      <h3 id="click-me"> Click Here </h3>
+                      <i class="fa-solid fa-8x fa-cloud-arrow-down"></i>
+                    </a> </div>
+
+                    <div class="content-right"></div>
+                  </div>
+                  <!-- End Resume -->
+
+
+                  <!-- Contact Me -->
+                  <div id="content7" class="content">
+
+                    <div class="linkedin">
+                      <i class="fa-brands fa-6x fa-linkedin"></i>
+                      <h3 id="linkedin-title"> Linkedin </h2>
+                      <a id="link" href="https://www.linkedin.com/in/redwanul-haque-457a9a17b/" class="btn btn-primary" target="_blank">Click Here </a>
+                    </div>
+
+                    <div class="email">
+                      <i class="fa-solid fa-6x fa-envelope-open-text"></i>
+                      <h3 id="email-title"> Email </h2>
+                      <h5 id="email"> redwanulhaque703@gmail.com</h5>
+                    </div>
+
+                    <div class="github">
+                      <i class="fa-brands fa-6x fa-github"></i>
+                      <h3 id="github-title"> Github </h2>
+                      <a id="github-link" href="https://github.com/redwanulhaque" class="btn btn-primary" target="_blank">Click Here</a>
+                    </div>
+
+                    <div class="content-left">
+                      <div class = "contact-form">
+                        <h1 id="contact-title">Contact Form </h1>
+                        <form action="https://formsubmit.co/redwanulhaque703@gmail.com" method="POST">
+                          <input type="text" name="Name" placeholder="Full Name" required>
+                          <input type="email" name="Email" placeholder="Your Email" required>
+                          <textarea id="message" name="Message" placeholder="Message" required></textarea>
+                          <button id = "send-button" type="submit">SEND</button>
+                        </form>
+                      </div>
+                    </div>
+
+                    <div class="content-right"></div>
+                  </div>
+                  <!-- End Contact Me-->
+
+
+                <!-- Background -->
+                <div class="sky-container">
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                  <div class="star"></div>
+                </div>
+                <!-- End Background -->
+
+          </div>
+
+  </body> <!-- BODY -->
+
+</html>
