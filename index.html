@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head> <!-- HEAD -->
+
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatiable" content="ie-edge">
+            <link rel="stylesheet" href="style.css">
+            <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+            <script src="script.js" defer></script>
+            <title>Redwanul Haque</title>
+            <script src="https://kit.fontawesome.com/86b206dc3f.js" crossorigin="anonymous"></script>
+
+  </head> <!-- HEAD -->
+
+
+  <body> <!-- BODY -->
+
+            <div id="lock"> <h1>Please rotate your device</h1></div>
+
+            <script>
+              function adjustZoom() {
+                const baseZoom1 = 0.516;
+                const baseZoom2 = 1.044;
+                const baseZoom3 = 1.57;
+                const baseZoom4 = 2.1;
+                const baseZoom5 = 2.62;
+                const baseZoom6 = 3.15;
+                const baseZoom7 = 3.68;
+                const baseZoom8 = 4.20;
+
+                const zoomFactor = 0.0106;
+
+                const minZoom = 0.2;
+
+                const windowWidth = window.innerWidth;
+                let newZoom;
+
+                if (windowWidth < 8000 && windowWidth >= 7000) {
+                  const widthDifference = 8000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom8 - zoomDecrease;
+                }
+
+                else if (windowWidth < 7000 && windowWidth >= 6000) {
+                  const widthDifference = 7000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom7 - zoomDecrease;
+                }
+
+                else if (windowWidth < 6000 && windowWidth >= 5000) {
+                  const widthDifference = 6000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20.2) * zoomFactor;
+                  newZoom = baseZoom6 - zoomDecrease;
+                }
+
+                else if (windowWidth < 5000 && windowWidth >= 4000) {
+                  const widthDifference = 5000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom5 - zoomDecrease;
+                }
+
+                else if (windowWidth < 4000 && windowWidth >= 3000) {
+                  const widthDifference = 4000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom4 - zoomDecrease;
+                }
+
+                else if (windowWidth < 3000 && windowWidth >= 2000) {
+                  const widthDifference = 3000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom3 - zoomDecrease;
+                }
+
+                else if (windowWidth < 2000 && windowWidth >= 1000) {
+                  const widthDifference = 2000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom2 - zoomDecrease;
+                }
+
+                else if (windowWidth < 1000 && windowWidth >= 500) {
+                  const widthDifference = 1000 - windowWidth;
+                  const zoomDecrease = Math.floor(widthDifference / 20) * zoomFactor;
+                  newZoom = baseZoom1 - zoomDecrease;
+                }
+
+                document.body.style.zoom = Math.max(newZoom, minZoom);
+              }
+
+              adjustZoom();
+              window.addEventListener('resize', adjustZoom);
+            </script>
+
+            <div class ="hero">
+
+                  <div class="btn-box">
+                    <button id="btn1" onclick="open1()"><i class="fa-solid fa-2x fa-person"></i>About Me</button>
+                    <button id="btn2" onclick="open2()"><i class="fa-solid fa-2x fa-folder"></i>Technical Projects</button>
+                    <button id="btn3" onclick="open3()"><i class="fa-solid fa-2x fa-graduation-cap"></i>Education</button>
+                    <button id="btn4" onclick="open4()"><i class="fa-brands fa-2x fa-black-tie"></i>Experiences</button>
+                    <button id="btn5" onclick="open5()"><i class="fa-solid fa-2x fa-brain"></i>My Skills</button>
+                    <button id="btn6" onclick="open6()"><i class="fa-solid fa-2x fa-file-arrow-down"></i>Resume</button>
+                    <button id="btn7" onclick="open7()"><i class="fa-solid fa-2x fa-envelope"></i>Contact Me</button>
+                  </div>
+
+                  <!-- About Me -->
+                  <div id="content1" class="content">
+
+                    <i class="fa-solid fa-5x fa-infinity"></i>
+
+                    <div class="aboutmeName">
+                      <h2>Redwanul_Haque</h2>
+                      <h2>Redwanul_Haque</h2>
+                    </div>
+
+                    <div class="softwareeng">
+                      <h4>Software Engineer</h4>
+                    </div>
+
+                    <div class="gallery">
+                      <img src="photos/portrait_1.jpg">
+                      <img src="photos/portrait_2.jpg">
+                      <img src="photos/portrait_3.jpg">
+                      <img src="photos/portrait_4.jpg">
+                      <img src="photos/portrait_5.jpg">
+                      <img src="photos/portrait_6.jpg">
+                      <img src="photos/portrait_7.jpg">
+                    </div>
+
+                    <a id="githubb" href="https://github.com/redwanulhaque" target="_blank">
+                      <i class="fa-brands fa-4x fa-github"></i>
+                    </a>
+
+                    <a id="linkedinn" href="https://www.linkedin.com/in/redwanul-haque-457a9a17b/" target="_blank">
+                      <i class="fa-brands fa-4x fa-linkedin-in"></i>
+                    </a>
+
+                    <a id="emaill" href="mailto:redwanulhaque703@gmail.com"><i class="fa-solid fa-4x fa-envelope-circle-check"></i>
+                    </a>
+
+                    <div class="getToknowme">
+                      <p id="me">Hello, I'm Redwanul Haque. I am a dedicated and ambitious individual currently pursuing a Master’s degree in Computer Science with a minor in Mathematics at Queens College. I am passionate about software development, particularly back-end development, and am always eager to learn new skills and tackle new challenges in this field. I have a strong foundation in programming languages such as Java and Python and have experience developing web applications using frameworks like Spring Boot and Django. If you're looking for a motivated and driven individual to join your team, I would love to connect and explore potential opportunities in software development.
+                      </p>
+                    </div>
+
+                    <div class="warpper">
+                      <input class="radio" id="one" name="group" type="radio" checked>
+                      <input class="radio" id="two" name="group" type="radio">
+                      <input class="radio" id="three" name="group" type="radio">
+                      <div class="tabs">
+                        <label class="tab" id="one-tab" for="one">Hobbies</label>
+                        <label class="tab" id="two-tab" for="two">Facts</label>
+                        <label class="tab" id="three-tab" for="three">Entertainment</label>
+                      </div>
+
+                      <div class="panels">
+
+                      <div class="panel" id="one-panel">
+                        <div class="panel-title"></div>
+                        <li>Coding</li>
+                        <li>Reading</li>
+                        <li>Going to Gym</li>
+                        <li>Playing Video Games</li>
+                        <li>Swimming</li>
+                        <li>Leetcode</li>
+                        <li>Watching Movies / TV Shows</li>
+                      </div>
+
+                      <div class="panel" id="two-panel">
+                        <div class="panel-title"></div>
+                        <li>I favor back-end coding over front-end.</li>
+                        <li>My preferred coding language is Java and Python.</li>
+                        <li>Every day, my objective is to solve one LeetCode problem.</li>
+                        <li>I gained most of my coding skills in college and through self-study.</li>
+                      </div>
+
+                      <div class="panel" id="three-panel">
+                        <div class="panel-title"></div>
+                        <li>Video Game - Adventure Quest 3D, COD Mobile</li>
+                        <li>Music Artists - The Weeknd, Don Omar</li>
+                        <li>Book - The Last Apprentice Series, Michael Vey Series</li>
+                        <li>TV Shows - The Boys, Stranger Things, Resident Alien, From</li>
+                        <li>Sport - Table Tennis, Soccer, Billiards</li>
+                      </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End About Me -->
+
+
+                  <!-- Personal Projects -->
+                  <div id="content2" class="content">
+
+                    <div class="content-left"></div>
+                          
+                    <canvas role="img" aria-label="A tree"></canvas>
+
+                    <!-- Popups for red apples -->
+                    <div class="apple-popup" id="apple-1"> 
+                      
+                      <h1 id="turbo">Turbo AI Chat Bot</h1>
+
+                      <video id = "video" width="540" height="360" controls>
+                        <source src="photos/turbo.mp4" type="video/mp4">
+                      </video>
+
+                      <div id="project-description">
+
+                          <p id="project-intro">
+                            <strong>Turbo-Chat</strong> is an AI chatbot built using the <strong>Google Gemini 2.0 API</strong>. The chatbot is created with the <strong>React.js</strong> framework, with a frontend mostly built using <strong>HTML</strong> and <strong>CSS</strong>. The backend, written in <strong>JavaScript</strong>, handles sending and receiving messages to and from the Gemini API in real time.
+                          </p>
+
+                          <p id="features-title"><strong>Main features:</strong></p>
+                          <ul id="features-list">
+                            <li id="feature-1">Users can type a message and receive answers to their questions.</li>
+                            <li id="feature-2">Supports voice communication: users can give voice commands, and the chatbot responds with text.</li>
+                            <li id="feature-3">Real-time message rendering for instant interaction.</li>
+                            <li id="feature-4">Smooth animations for a polished chat experience.</li>
+                            <li id="feature-5">Interactive UI elements like buttons, input fields, and pop-ups.</li>
+                            <li id="feature-6">Responsive design that works on different screen sizes.</li>
+                          </ul>
+
+                          <p id="code-organization">
+                            The code is clean and organized, with static files in <code>public</code> and source code in <code>src</code>.
+                          </p>
+
+                          <p id="tech-stack">
+                            <span id="tech-stack-label">Tech stack:</span> JavaScript, HTML, CSS, React.js, Vite
+                          </p>
+
+                          <p id="github-link">
+                            <span id="github-label">GitHub:</span> 
+                            <a href="https://github.com/redwanulhaque/Turbo-Chat" class="bg-open">https://github.com/redwanulhaque/Turbo-Chat</a>
+                          </p>
+
+                          <p id="live-demo-link">
+                            <span id="live-demo-label">Live Demo:</span> 
+                            <a href="https://turboai.netlify.app/" class="bg-open">https://turboai.netlify.app/</a>
+                          </p>
+
+                      </div>                            
+                  
+                    </div>
+
+                    <div class="apple-popup" id="apple-2">
+
+                      <h1 id="turbo">Portfolio Website</h1>
+
+                      <video id = "video" width="540" height="360" controls>
+                        <source src="photos/portfolio.mp4" type="video/mp4">
+                      </video>
+
+                      <div id="project-description">
+
+                        <p id="project-intro">
+                          <strong>Personal Portfolio Website</strong> is a highly dynamic and interactive site built from scratch using 
+                          <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. It provides an in-depth view of my background, 
+                          highlighting achievements, technical expertise, and projects through a smooth and responsive interface.
+                        </p>
+
+                        <p id="features-title"><strong>Main features:</strong></p>
+                          
+                        <ul id="features-list">
+                          <li id="feature-1">Clean and modern design for presenting resume details in an engaging format.</li>
+                          <li id="feature-2">Interactive sections for education, work experience, and projects with clickable navigation.</li>
+                          <li id="feature-3">Smooth animations and transitions for an enhanced browsing experience.</li>
+                          <li id="feature-4">Responsive layout that adapts seamlessly to desktop, tablet, and mobile screens.</li>
+                        </ul>
+
+                        <p id="code-organization">
+                          The website structure is simple and well-organized, making it easy to maintain and expand with new content or features.
+                        </p> 
+
+                        <p id="tech-stack">
+                          <span id="tech-stack-label">Tech stack:</span> HTML, CSS, JavaScript
+                        </p>
+
+                        <p id="github-link">
+                          <span id="github-label">GitHub:</span> 
+                          <a href="https://github.com/redwanulhaque/Personal-Portfolio" class="bg-open">https://github.com/redwanulhaque/Personal-Portfolio</a>
+                        </p>
+
+                        <p id="live-demo-link">
+                          <span id="live-demo-label">Live Demo:</span> 
+                          <a href="https://redwanulhaque.netlify.app/" class="bg-open">https://redwanulhaque.netlify.app/</a>
+                        </p>
+
+                      </div>
+
+                    </div>
+
+                    <div class="apple-popup" id="apple-3">
+
+                      <h1 id="turbo">Multithreaded-Jeopardy-Game</h1>
+
+                      <video id = "video" width="540" height="360" controls>
+                        <source src="photos/jeopardy.mp4" type="video/mp4">
+                      </video>
+
+                      <div id="project-description">
+
+                          <p id="project-intro">
+                            <strong>Jeopardy Game (Java Project)</strong> is a real-life multiplayer game implemented using built-in <strong>Java socket libraries</strong> to interconnect multiple computers on the same synchronous WiFi network. 
+                            The project features a robust <strong>Java GUI</strong> enabling seamless communication between hosts and players via socket connections, allowing for smooth, real-time gameplay on a server.
+                          </p>
+
+                          <p id="features-title"><strong>Main features:</strong></p>
+                            
+                          <ul id="features-list">
+                            <li id="feature-1">Real-time multiplayer gameplay across multiple computers connected on the same WiFi network.</li>
+                            <li id="feature-2">Robust Java GUI for host and player interactions, ensuring smooth and intuitive game flow.</li>
+                            <li id="feature-3">Socket-based communication enabling synchronized updates and responses between all participants.</li>
+                            <li id="feature-4">Structured design that allows easy expansion for additional game features or rounds.</li>
+                          </ul>
+
+                          <p id="code-organization">
+                            The project is organized with modular Java classes separating GUI, server, and client logic, making it maintainable and scalable.
+                          </p> 
+
+                          <p id="tech-stack">
+                            <span id="tech-stack-label">Tech stack:</span> Java, Java Swing, Socket Programming
+                          </p>
+
+                          <p id="github-link">
+                            <span id="github-label">GitHub:</span> 
+                            <a href="https://github.com/redwanulhaque/Multithreaded-Jeopardy-Game" class="bg-open">https://github.com/redwanulhaque/JeopardyGame</a>
+                          </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="apple-popup" id="apple-4">
+
+                       <h1 id="turbo">Banking Cooperation</h1>
+
+                      <video id = "video" width="540" height="360" controls>
+                        <source src="photos/banking.mp4" type="video/mp4">
+                      </video>
+
+                        <div id="project-description">
+
+                          <p id="project-intro">
+                            <strong>Banking System using Binary Tree</strong> simulates a real-world banking institution by utilizing a binary tree data structure. 
+                            The program begins by reading a text file containing multiple customers’ information, then organizes them using <strong>in-order traversal</strong> based on last names. 
+                            A user-friendly <strong>Java GUI</strong> allows customers to perform key banking operations seamlessly.
+                          </p>
+
+                          <p id="features-title"><strong>Main features:</strong></p>
+                            
+                          <ul id="features-list">
+                            <li id="feature-1">Binary tree implementation for efficient storage and retrieval of customer data.</li>
+                            <li id="feature-2">Reads and processes a text file containing multiple customer records.</li>
+                            <li id="feature-3">In-order traversal used to organize and sort customers by last name.</li>
+                            <li id="feature-4">Interactive interface for performing operations such as deposit, withdrawal, creating new profiles, and checking account details.</li>
+                            <li id="feature-5">Input-driven operations where users can access functions through number selections.</li>
+                          </ul>
+
+                          <p id="code-organization">
+                            The project is structured with Java classes for the binary tree, file reading, and user interface, ensuring maintainability and scalability.
+                          </p> 
+
+                          <p id="tech-stack">
+                            <span id="tech-stack-label">Tech stack:</span> Java, Java Swing, Binary Tree Data Structure, File I/O
+                          </p>
+
+                          <p id="github-link">
+                            <span id="github-label">GitHub:</span> 
+                            <a href="https://github.com/redwanulhaque/Banking-Cooperation" class="bg-open">https://github.com/redwanulhaque/Banking-Cooperation</a>
+                          </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="apple-popup" id="apple-5">
+
+                      <h1 id="turbo">Hotel-Management</h1>
+
+                      <video id = "video" width="540" height="360" controls>
+                        <source src="photos/hotel.mp4" type="video/mp4">
+                      </video>
+
+                      <div id="project-description">
+
+                        <p id="project-intro">
+                          <strong>Hotel Management System</strong> simulates a real-life hotel management software with five other group members. 
+                          Each member, including myself, applied a software design pattern to ensure that their component functioned seamlessly with the rest of the system. 
+                          The project provides a user-friendly interface to manage bookings, check-ins, check-outs, and room availability.
+                        </p>
+
+                        <p id="features-title"><strong>Main features:</strong></p>
+                          
+                        <ul id="features-list">
+                          <li id="feature-1">Collaborative design using software design patterns for modular and maintainable code.</li>
+                          <li id="feature-2">Manage hotel bookings, check-ins, check-outs, and room availability efficiently.</li>
+                          <li id="feature-3">Interactive Java GUI for smooth user operations.</li>
+                          <li id="feature-4">Input-driven operations allowing users to access functionalities via menu selections.</li>
+                          <li id="feature-5">Organized project structure for scalability and ease of updates.</li>
+                        </ul>
+
+                        <p id="code-organization">
+                          The project is structured with Java classes for core functionality, user interface, and backend logic, ensuring maintainability and scalability.
+                        </p> 
+
+                        <p id="tech-stack">
+                          <span id="tech-stack-label">Tech stack:</span> Java, Java Swing, Software Design Patterns, File I/O
+                        </p>
+
+                        <p id="github-link">
+                          <span id="github-label">GitHub:</span> 
+                          <a href="https://github.com/redwanulhaque/Hotel-Management" class="bg-open">https://github.com/redwanulhaque/Hotel-Management</a>
+                        </p>
+
+                      </div>
+
+
+                    </div>
+
+
+                    <div class="apple-popup" id="apple-6">Hello from Apple 6</div>
+                    <div class="apple-popup" id="apple-7">Hello from Apple 7</div>
+                    <div class="apple-popup" id="apple-8">Hello from Apple 8</div>
+                    <div class="apple-popup" id="apple-9">Hello from Apple 9</div>
+                    <div class="apple-popup" id="apple-10">Hello from Apple 10</div>
+
+                    <div class="content-right"></div>
+
+                  </div>
+                  <!-- End Personal Projects -->
+
+
+                  <!-- Education -->
+                  <div id="content3" class="content">
+                    <div class="content-left"></div>
+
+                      <div class="patterns">
+                        <svg width="100%" height="100%">
+
+                          <rect x="0" y="0" width="100%" height="100%" fill="url(#polka-dots)"></rect>
+
+                          <text x="50%" y="60%" text-anchor="middle">
+                            Educational Background
+                          </text>
+
+                        </svg>
+                      </div>
+
+                      <div class="timelineEducation">
+                        <div class="outerEducation">
+
+                          <div class="card">
+                            <div class="info">
+                              <h2 class="educationTitle">CUNY Queens College</h2>
+                              <h3 class="educationDate">August 2024 - June 2027</h3>
+                              <h3 class="educationDegree">Major - Computer Science, M.A</h3>
+                              <h3 class="educationGpa">GPA - 4.0</h3>
+                              <img src="photos/queensCollege.jpg" id="queensCollegePic">
+                            </div>
+                          </div>
+
+                          <div class="card">
+                            <div class="info">
+                              <h2 class="educationTitle">CUNY Queens College</h2>
+                              <h3 class="educationDateRight">August 2019 - June 2023</h3>
+                              <h3 class="educationDegreeRight">Major - Computer Science, B.S</h3>
+                              <h3 class="educationDegreeRight">Minor - Mathematics</h3>
+                              <h3 class="educationGpaRight">GPA - 3.61</h3>
+                              <img src="photos/JohnJay.jpg" id="johnjay">
+                            </div>
+                          </div>
+
+                          <div class="card">
+                            <div class="info">
+                              <h2 class="educationTitle">Health Professions & Human Services</h2>
+                              <h3 class="educationDate">September 2015 - June 2019</h3>
+                              <h3 class="educationDegree">High School Degree</h3>
+                              <h3 class="educationGpa">GPA - 3.7</h3>
+                              <img src="photos/HighSchool.jpg" id="highschool">
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    <div class="content-right"></div>
+                  </div>
+                  <!-- End Education -->
+
+
+                  <!-- Experiences -->
+                  <div id="content4" class="content">
+                    <div class="content-left"></div>
+
+                    <div class="timeline">
+
+                      <div class="job">
+                        <div class="job-header">
+                          <span class="job-title">Software Engineer Intern</span>
+                          <span class="job-location">New York, NY</span>
+                        </div>
+                        <div class="job-footer">
+                          <span class="job-company">DCAS</span>
+                          <span class="job-date">August 2025 – December 2025</span>
+                        </div>
+                        <div class="job-description">
+                          <ul>
+                            <li>Current.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="job">
+                        <div class="job-header">
+                          <span class="job-title">Build Student Consultant, Technology</span>
+                          <span class="job-location">Remote</span>
+                        </div>
+                        <div class="job-footer">
+                          <span class="job-company">Open Avenues Foundation</span>
+                          <span class="job-date">June 2025 – September 2025</span>
+                        </div>
+                        <div class="job-description">
+                          <ul>
+                            <li>Developed and implemented time series models such as ARIMA, Gradient Boosting, and Decision Trees in Python to analyze Ethereum dataset trends.</li>
+                            <li>Engineered a full-stack flashcard app with server-side rendered React using Next.js, built API routes for backend logic, and integrated Prisma ORM for type-safe database querying and schema management on PostgreSQL.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="job">
+                        <div class="job-header">
+                          <span class="job-title-dontfit">Leadership, Innovation, and Financial Technology Program</span>
+                          <span class="job-location">New York, NY</span>
+                        </div>
+                        <div class="job-footer">
+                          <span class="job-company">Bank of America | ALPFA</span>
+                          <span class="job-date">June 2025 – August 2025</span>
+                        </div>
+                        <div class="job-description">
+                          <ul>
+                            <li> Utilized SQL, Alteryx, Tableau, and Excel to clean, transform, and visualize financial datasets of 8,000+ records, delivering actionable insights through advanced data storytelling.</li>
+                            <li> Engaged with senior executives and industry leaders through panels and workshops focused on leadership, financial services, and emerging technologies.</li>
+                            <li> Completed professional development modules on Executive Presence, Emotional Intelligence (EQ), and effective data storytelling for business impact.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="job">
+                        <div class="job-header">
+                          <span class="job-title">Graduate Teaching Assistant </span>
+                          <span class="job-location">Queens, NY</span>
+                        </div>
+                        <div class="job-footer">
+                          <span class="job-company">CUNY Queens College</span>
+                          <span class="job-date">September 2024 – January 2025</span>
+                        </div>
+                        <div class="job-description">
+                          <ul>
+                            <li> Provided detailed feedback on assignments, improving students coding skills and code quality.</li>
+                            <li> Assisted with advanced Python topics such as OOP, data structures, and algorithms, enhancing students understanding and performance.</li>
+                            <li> Collaborated with the professor to design programming exercises that simulate real-world scenarios, enhancing hands-on learning.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="job">
+                        <div class="job-header">
+                          <span class="job-title">Software Engineer Fellowship</span>
+                          <span class="job-location">New York, NY</span>
+                        </div>
+                        <div class="job-footer">
+                          <span class="job-company">Headstarter</span>
+                          <span class="job-date">June 2024 – September 2024</span>
+                        </div>
+                        <div class="job-description">
+                          <ul>
+                            <li> Conducted code reviews and automated testing (using JUnit) to ensure software reliability and maintainability, reducing bugrelated issues.</li>
+                            <li> Led a project team to deliver a complex software module within a tight deadline, ensuring all project milestones were achieved
+                            ahead of schedule. </li>
+                            <li> Developed and maintained dynamic single-page applications using React.js, enhancing user experience by implementing responsive and interactive UI components.
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="job">
+                        <div class="job-header">
+                          <span class="job-title">Software Engineer Apprenticeship</span>
+                          <span class="job-location">New York, NY</span>
+                        </div>
+                        <div class="job-footer">
+                          <span class="job-company">Code Nation</span>
+                          <span class="job-date">January 2022 – May 2022</span>
+                        </div>
+                        <div class="job-description">
+                          <ul>
+                            <li> Showcased a strong commitment to continuous learning and improvement throughout the apprenticeship.</li>
+                            <li> Demonstrated strong problem-solving skills by tackling complex coding challenges and finding efficient solutions.</li>
+                            <li> Participated in code reviews to improve code quality and ensure adherence to best practices.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div class="job">
+                        <div class="job-header">
+                          <span class="job-title">CUNY Service Corps Intern </span>
+                          <span class="job-location">New York, NY</span>
+                        </div>
+                        <div class="job-footer">
+                          <span class="job-company">CUNY Service Corps Intern </span>
+                          <span class="job-date">May 2021 – August 2021</span>
+                        </div>
+                        <div class="job-description">
+                          <ul>
+                            <li> Built and established community-based projects to reopen different sections of the city during the COVID-19 pandemic.</li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="content-right"></div>
+                  </div>
+                  <!-- End Experiences -->
+
+
+                  <!-- Skills -->
+                  <div id="content5" class="content">
+                    <div class="content-left"></div>
+
+                      <div class="languages-dropdown">
+                          <button class="languages-dropbtn">Languages</button>
+                          <ul class="languages-dropdown-content" id="language-i-speak">
+                            <li>English</li>
+                            <li>Bengali</li>
+                            <li>Hindi</li>
+                          </ul>
+                      </div> 
+
+                      <div class="systems-dropdown">
+                        <button class="systems-dropbtn">Systems</button>
+                          <ul class="systems-dropdown-content" id="system-langauges-i-used">
+                            <li>Git</li>
+                            <li>Linux</li>
+                            <li>Windows</li>
+                            <li>Docker</li>
+                            <li>Kubernetes</li>
+                            <li>Bash</li>
+                            <li>PowerShell</li>
+                            <li>AWS</li>
+                            <li>Azure</li>
+                          </ul>
+                      </div>
+
+                      <div class="programming-dropdown">
+                        <button class="programming-dropbtn">Programming Languages</button>
+                        <ul class="programming-dropdown-content" id="programming-languages-i-know">
+                          <li>JAVA</li>
+                          <li>Python</li>
+                          <li>C++</li>
+                          <li>C</li>
+                          <li>HTML</li>
+                          <li>CSS</li>
+                          <li>PHP</li>
+                          <li>SQL</li>
+                          <li>JAVA Script</li>
+                        </ul>
+                      </div>
+
+                      <div class="frameworks-dropdown">
+                        <button class="frameworks-dropbtn">Frameworks</button>
+                        <ul class="frameworks-dropdown-content">
+                          <li>Django</li>
+                          <li>Flask</li>
+                          <li>Spring Boot</li>
+                          <li>ASP.NET</li>
+                          <li>React.JS</li>
+                        </ul>
+                      </div>
+
+
+                      <div class="certifications-dropdown">
+                        <button class="certifications-dropbtn">Certifications</button>
+                        <ul class="certifications-dropdown-content">
+                          <li>MS Azure Fundamentals</li>
+                        </ul>
+                      </div>
+
+                      <div class="others-dropdown">
+                        <button class="others-dropbtn">Others</button>
+                        <ul class="others-dropdown-content">
+                          <li>Cloud Computing</li>
+                          <li>Project Management</li>
+                          <li>CI/CD</li>
+                          <li>Automation</li>
+                          <li>Data Structures</li>
+                          <li>Quality Assurance</li>
+                          <li>Software Development</li>
+                        </ul>
+                      </div>
+
+                    <div class="content-right"></div>
+                  </div>
+                  <!-- End Skills -->
+
+
+                  <!-- Resume -->
+                  <div id="content6" class="content">
+                    <div class="content-left"></div>
+
+                    <div class="box"> <a id= "resume" href="Redwanul_Haque_Resume.pdf" download>
+                      <h3 id="click-me"> Click Here </h3>
+                      <i class="fa-solid fa-8x fa-cloud-arrow-down"></i>
+                    </a> </div>
+
+                    <div class="content-right"></div>
+                  </div>
+                  <!-- End Resume -->
+
+
+                  <!-- Contact Me -->
+                  <div id="content7" class="content">
+                    <div class="content-left"></div>
+
+                      <div class = "contact-form">
+
+                        <h1 id="contact-title">Contact Form </h1>
+                        <form action="https://formsubmit.co/redwanulhaque703@gmail.com" method="POST">
+                          <input id = "contactName" type="text" name="Name" placeholder="Full Name" required>
+                          <input id = "contactEmail" type="email" name="Email" placeholder="Your Email" required>
+                          <textarea id="message" name="Message" placeholder="Message" required></textarea>
+                          <button id = "send-button" type="submit">Send Message</button>
+                        </form>
+
+                        <div class="wrapper four">
+                          <div class="type">
+                              <h3 class="typing">I'd Love To Connect With You</h3>
+                          </div>
+                        </div>
+
+                        <a id="contactGithubb" href="https://github.com/redwanulhaque" target="_blank">
+                          <i class="fa-brands fa-10x fa-github"></i>
+                        </a>
+
+                        <a id="contactLinkedinn" href="https://www.linkedin.com/in/redwanul-haque-457a9a17b/" target="_blank">
+                          <i class="fa-brands fa-10x fa-linkedin-in"></i>
+                        </a>
+
+                        <a id="contactEmaill" href="mailto:redwanulhaque703@gmail.com"><i class="fa-solid fa-10x fa-envelope-circle-check"></i>
+                        </a>
+
+                      </div>
+
+                    <div class="content-right"></div>
+                  </div>
+                  <!-- End Contact Me-->
+
+
+                  <!-- Background -->
+                  <div class="sky-container">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                  </div>
+                  <!-- End Background -->
+
+          </div>
+
+  </body> <!-- BODY -->
+
+</html>
